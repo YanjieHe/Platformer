@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/neuropol x rg.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/Items/coinGold.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=5]
+
+
+
+
+
+
+
+
+
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="PlayerStatus" type="CanvasLayer"]
+
+[node name="Score" type="Label" parent="."]
+margin_left = 70.0
+margin_top = 16.0
+margin_right = 157.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinLabel" type="Sprite" parent="."]
+position = Vector2( 35, 36 )
+texture = ExtResource( 3 )
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 21.0
+margin_top = 70.0
+margin_right = 104.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
+text = "Pause"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Button" parent="."]
+margin_left = 280.0
+margin_top = 210.0
+margin_right = 722.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 3 )
+text = "Back to Main Menu"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Pause" to="Pause" method="_on_Pause_pressed"]
+[connection signal="pressed" from="MainMenu" to="MainMenu" method="_on_MainMenu_pressed"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/EnemySlime.gd" type="Script" id=1]
+[ext_resource path="res://Images/Enemies/slimeWalk1.png" type="Texture" id=2]
+[ext_resource path="res://Images/Enemies/slimeWalk2.png" type="Texture" id=3]
+[ext_resource path="res://Images/Enemies/slimeDead.png" type="Texture" id=4]
+
+
+
+
+
+
+
+
+
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25, 14 )
+
+[node name="EnemySlime" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 27
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk"
+centered = false
+offset = Vector2( 0, 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 25, 25 )
+shape = SubResource( 2 )
