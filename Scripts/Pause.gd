@@ -11,6 +11,7 @@ func _on_Pause_pressed():
 	var main_menu_button = get_tree().get_nodes_in_group("MainMenu")[0]
 	if get_tree().paused:
 		get_tree().paused = false
+		text = "Pause"
 		main_menu_button.visible = false
 	else:
 		get_tree().paused = true
