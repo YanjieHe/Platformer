@@ -3,11 +3,6 @@
 [ext_resource path="res://Images/Tiles/tiles_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Images/Tiles/super-mario-pipe.png" type="Texture" id=2]
 
-
-
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35, 35 )
 

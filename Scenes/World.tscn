@@ -6,11 +6,6 @@
 [ext_resource path="res://DirtTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://Fonts/astron boy wonder.ttf" type="DynamicFontData" id=5]
 
-
-
-
-
-
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 3 )
