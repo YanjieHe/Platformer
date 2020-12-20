@@ -7,4 +7,5 @@ I developed a 2D platformer with Godot Engine.
 
 # Credits
 
+Author: Yanjie He
 Game Assets: Kenney.nl 
